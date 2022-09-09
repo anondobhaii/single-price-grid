@@ -103,17 +103,3 @@ main section:nth-child(3) p {
     padding: 2.5em !important;
   }
 }
-footer {
-  position: absolute;
-  top: 95%;
-  text-align: center;
-  width: 90%;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 12px;
-  z-index: -100;
-}
-footer a {
-  text-decoration: none;
-  color: var(--cyan);
-}
