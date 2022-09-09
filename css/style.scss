@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+:root {
+  // Primary
+  --cyan: hsl(179, 62%, 43%);
+  --bright-yellow: hsl(71, 73%, 54%);
+
+  // Neutral
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+}
+
+body {
+  background: var(--light-gray);
+  
+}
+main {
+  width: 100%;
+  min-height: 100vh;
+  .card{
+    border-radius: 0.5em;
+    border: none;
+    overflow: hidden;
+  }
+  section {
+    &:nth-child(1){
+      h4 {
+        color: var(--cyan);
+        font-weight: 700;
+      }
+      #cap {
+        color: var(--bright-yellow);
+        font-weight: 700;
+      }
+      #details{
+        color: var(--grayish-blue);
+      }
+    }
+    &:nth-child(2){
+        background: hsl(179, 62%, 41%);
+        h4{
+            color: var(--light-gray);
+            font-weight: 700;
+        }
+        div{
+            margin-bottom: 0.5em;
+            h1{
+                margin-bottom: 0;
+                font-weight: 600;
+                color: #fff;
+            }
+            >span{
+                padding-left: 1em;
+                color: var(--light-gray);
+                opacity: 0.7;
+            }
+        }
+        p{
+            color: var(--light-gray);
+        }
+        a{
+            text-decoration: none;
+            font-weight: 700;
+            display: block;
+            color: #fff;
+            background: var(--bright-yellow);
+            text-align: center;
+            padding: 0.8em;
+        }
+    }
+    &:nth-child(3){
+        background: var(--cyan);
+        h4{
+            color: var(--light-gray);
+            font-weight: 700;
+        }
+        p{
+            color: var(--light-gray);
+            opacity: 0.8;
+        }
+    }
+  }
+}
+
+
+@media (min-width: 47.94em){
+    .card{
+        display:grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas: 
+            "a a"
+            "b c"
+            ;
+        section{
+            &:nth-child(1){
+                grid-area: a;
+                width: 40em;
+                padding: 2.5em!important;
+            }
+            &:nth-child(2){
+                grid-area: b;
+                padding: 2.5em!important;               
+            }
+            &:nth-child(3){
+                grid-area: c;
+                padding: 2.5em!important;
+            }
+        }
+    }
+}
+
+footer {
+    position: absolute;
+    top: 95%;
+    text-align: center;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    z-index: -100;
+    a {
+      text-decoration: none;
+      color: var(--cyan);
+    }
+  }
+  
